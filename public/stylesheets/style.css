@@ -1,23 +1,32 @@
 body {
-  font-family: 'Arial', sans-serif;
-  text-align: center;
-  margin: 50px;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 50px;
 }
-h1 {
-  color: #333;
+
+main {
+    width: 500px;
+    margin: 0 auto;
 }
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border: none;
+
+#errMessage {
+    color: red;
 }
-button:hover {
-  background-color: #45a049;
-}
+
 #output {
-  margin-top: 20px;
-  font-size: 18px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#generateBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #ccc;
+    border: 1px solid #ccc;
+    cursor: pointer;
 }
