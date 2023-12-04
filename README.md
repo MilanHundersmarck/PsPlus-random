@@ -21,7 +21,7 @@ git clone https://github.com/MilanHundersmarck/PsPlus-random.git
 2.  Navigate to the project directory:
 
 ```bash
-cd PsPlus-random`
+cd PsPlus-random
 ```
 
 3.  Install the dependencies:
