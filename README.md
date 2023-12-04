@@ -4,7 +4,7 @@
 
 Welcome to the Random PS PLUS Game Selector repository! This project provides a web application and an API that allow users to randomly select a game from the PS PLUS Extra catalogue. The data is scraped from the official PlayStation website [here](https://www.playstation.com/nl-nl/ps-plus/games/).
 
-**Demo: [pplus-random.onrender.com](https://pplus-random.onrender.com/)**
+**Demo: [randomgame.milanhundersmarck.nl](http://randomgame.milanhundersmarck.nl/)**
 
 ## Disclaimer
 This project is currently in a very early stage of development.
