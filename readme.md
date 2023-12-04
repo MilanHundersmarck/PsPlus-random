@@ -15,13 +15,13 @@ To run the Random PS PLUS Game Selector locally, follow these steps:
 1.  Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/random-ps-plus-game-selector.git
+git clone https://github.com/MilanHundersmarck/PsPlus-random.git
 ```
 
 2.  Navigate to the project directory:
 
 ```bash
-cd random-ps-plus-game-selector`
+cd PsPlus-random`
 ```
 
 3.  Install the dependencies:
@@ -43,16 +43,16 @@ npm start
 ### Web Application
 
 1.  Navigate to [http://localhost:3000](http://localhost:3000/) in your web browser.
-2.  Click on the "Generate" button to get a random game from the PS PLUS Extra catalogue.
+2.  Click on the "Generate" button to get a random game from the catalogue.
 
 ### API
 
-The API can be accessed at [http://localhost:3000/api/random-game](http://localhost:3000/api/random-game). Make a GET request to this endpoint to receive a JSON response with information about the randomly selected game.
+The API can be accessed at [http://localhost:3000/api/games](http://localhost:3000/api/games). Make a GET request to this endpoint to receive a JSON response with a list of all the Ps plus games.
 
 Example:
 
-bashCopy code
-
-`curl http://localhost:3000/api/random-game`
+```bash
+curl http://localhost:3000/api/games
+```
 
 Happy gaming! 🎮
