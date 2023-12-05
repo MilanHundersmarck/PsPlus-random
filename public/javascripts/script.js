@@ -1,5 +1,9 @@
 var gamesData;
 
+document.getElementById('game-output').addEventListener('click', initPick);
+document.getElementById('reroll-button').addEventListener('click', pickGame);
+document.getElementById('update-button').addEventListener('click', reset);
+
 fetch('/api/games')
   .then(response => response.json())
   .then(data => {
@@ -13,7 +17,25 @@ fetch('/api/games')
     console.error('Error fetching data:', error);
   });
 
-document.getElementById('generateBtn').addEventListener('click', function() {
+function rollAnimation() {
+  if (Array.isArray(gamesData) && gamesData.length > 0) {
+    document.getElementById('restart-options').style.display = 'none';
+    document.getElementById('plan-options').style.display = 'none';
+
+    for (let i = 0; i < 25; i++) {
+      setTimeout(function() {
+        var randomIndex = Math.floor(Math.random() * gamesData.length);
+        document.getElementById('game-output').innerText = gamesData[randomIndex].name;
+      }, 100 * i);
+    }
+
+    setTimeout(function() {
+      document.getElementById('restart-options').style.display = 'flex';
+    }, 2500);
+  }
+}
+
+function pickGame() {
   if (Array.isArray(gamesData) && gamesData.length > 0) {
     rollAnimation()
   } else {
@@ -29,15 +51,16 @@ document.getElementById('generateBtn').addEventListener('click', function() {
       })
 
   }
-});
+}
 
-function rollAnimation() {
-  if (Array.isArray(gamesData) && gamesData.length > 0) {
-    for (let i = 0; i < 25; i++) {
-      setTimeout(function() {
-        var randomIndex = Math.floor(Math.random() * gamesData.length);
-        document.getElementById('output').innerText = gamesData[randomIndex].name;
-      }, 100 * i);
-    }
-  }
+function initPick() {
+  pickGame();
+  document.getElementById('game-output').removeEventListener('click', initPick);
+}
+
+function reset() {
+  document.getElementById('plan-options').style.display = 'flex';
+  document.getElementById('restart-options').style.display = 'none';
+  document.getElementById('game-output').innerText = 'Click to roll';
+  document.getElementById('game-output').addEventListener('click', initPick);
 }

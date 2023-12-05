@@ -7,29 +7,36 @@
     <title>Random game</title>
 </head>
 <body>
-    <div id="container">
-        <!-- <aside>
-            <div id="filter">
-                <h2>Filter</h2>
-                <div id="filterOptions">
-                    <div class="filterOption">
-                        <label for="subscription">Platform</label>
-                        <select name="subscription" id="subscription">
-                            <option value="all">Extra</option>
-                            <option value="all">Premium</option>
-                        </select>
-                    </div>
-                </div>
-        </aside> -->
-        <main>
-            <h1>Random game selector</h1>
+    <header>
+        <div id="top-line"></div>
+        <!-- <img src="images/shuffle-solid.svg" alt="Randomize icon" id="nav-logo"> -->
+    </header>
+    <main>
+        <h1 class="title">Random <span>PS+</span> Game Picker</h1>
 
-            <div id="output"></div>
+        <div id="container">
+            <div id="game-output" class="title">Click to roll</div>
             <div id="errMessage"></div>
+            <div id="plan-options">
+                <div>
+                    <img src="images/ps-plus-premium-badge.svg" alt="PS+ logo" id="plan-badge">
+                    <input type="radio" name="chosen-plan" value="premium" disabled>
+                </div>
+                <div>
+                    <img src="images/ps-plus-extra-badge.svg" alt="PS+ logo" id="plan-badge">
+                    <input type="radio" name="chosen-plan" value="extra" checked>
+                </div>
+            </div>
+            <div id="restart-options">
+                <div id="reroll-button">Try again</div>
+                <div id="update-button">Update settings</div>
+            </div>
+        </div>
 
-            <div id="generateBtn">Generate</div>
-        </main>
-    </div>
+        <!-- <div id="output"></div>
+
+        <div id="generateBtn">Generate</div> -->
+    </main>
 
     <script src="javascripts/script.js"></script>
 </body>
